@@ -1,44 +1,44 @@
 import { expect } from "chai";
-import converter from "../index.js";
+import converter from "array-converter-test-task";
 
 describe("converter", () => {
 	it("should convert [1,2,3,4,5,6,7,8] to '1-8'", done => {
-		converter([1, 2, 3, 4, 5, 6, 7, 8]).then((result) => {
+		converter([1, 2, 3, 4, 5, 6, 7, 8]).then(result => {
 			expect(result).to.equal('1-8');
 			done();
 		});
 	});
 
 	it("should convert [1,3,4,5,6,7,8] to '1,3-8'", done => {
-		converter([1, 3, 4, 5, 6, 7, 8]).then((result) => {
+		converter([1, 3, 4, 5, 6, 7, 8]).then(result => {
 			expect(result).to.equal('1,3-8');
 			done();
 		});
 	});
 
 	it("should convert [1,3,4,5,6,7,8,10,11,12] to '1,3-8,10-12'", done => {
-		converter([1, 3, 4, 5, 6, 7, 8, 10, 11, 12]).then((result) => {
+		converter([1, 3, 4, 5, 6, 7, 8, 10, 11, 12]).then(result => {
 			expect(result).to.equal('1,3-8,10-12');
 			done();
 		});
 	});
 
 	it("should convert [1,2,3] to '1-3'", done => {
-		converter([1, 2, 3]).then((result) => {
+		converter([1, 2, 3]).then(result => {
 			expect(result).to.equal('1-3');
 			done();
 		});
 	});
 
 	it("should convert [1,2] to '1,2'", done => {
-		converter([1, 2]).then((result) => {
+		converter([1, 2]).then(result => {
 			expect(result).to.equal('1,2');
 			done();
 		});
 	});
 
 	it("should convert [1,2,4] to '1,2,4'", done => {
-		converter([1, 2, 4]).then((result) => {
+		converter([1, 2, 4]).then(result => {
 			expect(result).to.equal('1,2,4');
 			done();
 		});
