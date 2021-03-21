@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { converter } from "../index.js";
+import converter from "../index.js";
 
 describe("converter", () => {
 	it("should convert [1,2,3,4,5,6,7,8] to '1-8'", done => {

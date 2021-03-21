@@ -1,4 +1,4 @@
-async function converter(array) {
+export default async function converter(array) {
 	return new Promise((res, rej) => {
 		let result = '';
 		if (array.length) {
@@ -14,5 +14,3 @@ async function converter(array) {
 		res(result);
 	});
 };
-
-export { converter };
