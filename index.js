@@ -13,4 +13,4 @@ export default async function converter(array) {
 		}
 		res(result);
 	});
-};
+}
